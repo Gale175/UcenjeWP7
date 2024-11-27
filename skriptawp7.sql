@@ -10,6 +10,6 @@ create database edunovawp7;
 go
 use edunovawp7;
 
---create table smjer(
---naziv varchar(50)
---);
+create table smjer(
+naziv varchar(50)
+);
