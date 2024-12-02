@@ -8,15 +8,15 @@ use ispiti;
 
 create table IspitniRok(
 sifra int not null primary key identity(1,1),
-predmet varchar(30),
-vrstaIspita char(50),
+predmet varchar(30) not null,
+vrstaIspita char(50) not null,
 datum datetime,
-pristupio bit
+pristupio bit not null
 );
 
 create table Pristupnici(
 ispitniRok int not null references IspitniRok(sifra),
-student char(80),
-brojBodova int,
-ocjena int
+student char(80) not null,
+brojBodova int not null,
+ocjena int not null
 );
