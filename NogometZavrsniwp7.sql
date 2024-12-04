@@ -13,7 +13,7 @@ naziv varchar(80) not null,
 vrsta varchar(50) not null,
 sezona datetime not null,
 mjesto_odigravanja varchar(80),
-pobjednik int not null primary key identity(1,1),
+pobjednik int not null,
 najbolji_igrac int,
 );
 
