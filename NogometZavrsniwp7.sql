@@ -36,6 +36,6 @@ asistencije int not null
 );
 
 create table sezone(
-tim int not null references natjecanja(pobjednik),
-igrac int not null references igrac(sifra)
+tim int not null references timovi(sifra),
+igrac int not null references igraci(sifra)
 );
