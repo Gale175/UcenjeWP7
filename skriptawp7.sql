@@ -1,7 +1,7 @@
-﻿-- Ovako se pišu komentari
+﻿﻿-- Ovako se pišu komentari
 
 use master;
-go
+go 
 drop database if exists edunovawp7;
 go
 create database edunovawp7 collate Croatian_CI_AS;
@@ -25,8 +25,6 @@ prezime varchar(50) not null,
 oib char(11),
 email varchar(100) not null
 );
-
-select * from polaznici;
 
 create table grupe(
 sifra int not null primary key identity(1,1), 
@@ -90,15 +88,16 @@ INSERT INTO polaznici (ime, prezime, email) VALUES
 ('Boris', 'Bukovec', 'botaosijek@gmail.com'),
 ('Luka', 'Jurak', 'jurakluka18@gmail.com'),
 ('Ivan', 'Strmečki', 'ivan.strmecki8@gmail.com'),
-('Bruno', 'Bašić', 'brunobasic031@gmail.com');
+('Bruno', 'Bašić', 'brunobasic031@gmail.com'),
+('Jakov', 'Antolović', 'jakovantolović@gmail.com','54511389834');
+
+
 
 insert into clanovi (grupa,polaznik) values
-(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(2,7),
-(2,8),(2,9),(2,10),(2,11),(2,12),(2,13),
-(2,14),(2,15),(2,16),(2,17),(2,18),(2,19),
-(2,20),(2,21),(2,22),(2,23),(2,24),(2,25),
-(2,26),(2,7),
+(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),
+(2,7),(2,8),(2,9),(2,10),(2,11),(2,12),
+(2,13),(2,14),(2,15),(2,16),(2,17),(2,18),
+(2,19),(2,20),(2,21),(2,22),(2,23),(2,24),
+(2,25),(2,26),(2,27),
 
 (3,7),(3,17),(3,27);
-
-select * from clanovi;
