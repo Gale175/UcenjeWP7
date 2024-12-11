@@ -1,6 +1,4 @@
-﻿﻿-- Ovako se pišu komentari
-
-use master;
+﻿use master;
 go 
 drop database if exists edunovawp7;
 go
@@ -89,7 +87,7 @@ INSERT INTO polaznici (ime, prezime, email) VALUES
 ('Luka', 'Jurak', 'jurakluka18@gmail.com'),
 ('Ivan', 'Strmečki', 'ivan.strmecki8@gmail.com'),
 ('Bruno', 'Bašić', 'brunobasic031@gmail.com'),
-('Jakov', 'Antolović', 'jakovantolović@gmail.com','54511389834');
+('Jakov', 'Antolović', 'jakovantolović@gmail.com');
 
 
 
