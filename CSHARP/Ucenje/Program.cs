@@ -3,7 +3,17 @@
 
 using Ucenje;
 
-E04Z1.Izvedi();
+E06Nizovi.Izvedi();
+
+
+//using Ucenje;
+
+//E05UvjetnoGrananjeSwitch.Izvedi();
+
+
+//using Ucenje;
+
+//E04Z1.Izvedi();
 
 
 //using Ucenje;
