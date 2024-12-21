@@ -3,7 +3,22 @@
 
 using Ucenje;
 
-E06Nizovi.Izvedi();
+E07SubotaZ6.Izvedi();
+
+
+//using Ucenje;
+
+//E07SubotaZ2.Izvedi();
+
+
+//using Ucenje;
+
+//E07SubotaZ1.Izvedi();
+
+
+//using Ucenje;
+
+//E06Nizovi.Izvedi();
 
 
 //using Ucenje;
