@@ -13,10 +13,10 @@ namespace Ucenje
         {
             // Console.WriteLine("E04");
 
-            int broj = 7; // Ovo je kao da sam ispisao poruku i da je korisnik unio broj 7
+            int broj = 7;
 
             //Operator == provjerava jednakost on je tipa bool
-
+            // Ovo je kao da sam ispisao poruku i da je korisnik unio broj 7
             bool uvjet = broj == 7;
 
             //if radi sa bool tipom podatka
