@@ -10,13 +10,13 @@ namespace Ucenje
     {
         //Program unosi od korisnika cijeli broj
         //Program ispisuje da li je broj paran ili neparan
-        
-        public static void Izvedi() 
+
+        public static void Izvedi()
         {
             Console.Write("Unesi cijeli broj: ");
             int broj = int.Parse(Console.ReadLine());
 
-            if (broj % 2 == 0) 
+            if (broj % 2 == 0)
             {
                 Console.WriteLine("PARAN");
             }
@@ -25,7 +25,7 @@ namespace Ucenje
                 Console.WriteLine("NEPARAN");
             }
 
-            Console.WriteLine("{0}PARAN", broj % 2==0  ? "" : "NE");
+            Console.WriteLine("{0}PARAN", broj % 2 == 0 ? "" : "NE");
         }
 
     }

@@ -9,7 +9,7 @@ namespace Ucenje
 {
     internal class E02Varijable
     {
-        public static void Izvedi() 
+        public static void Izvedi()
         {
 
             //Console.WriteLine("E02");
@@ -25,7 +25,7 @@ namespace Ucenje
             double velikiDecimalniBroj = 3.14;
 
             decimal decimalniBroj2 = 3.4M;
-            
+
             char znak = '@';
 
             string nizZnakova = "dfdsfjne";
@@ -35,7 +35,7 @@ namespace Ucenje
             cijeliBroj = int.MaxValue;
 
             Console.WriteLine(cijeliBroj);
-            Console.WriteLine(cijeliBroj+1);
+            Console.WriteLine(cijeliBroj + 1);
 
 
 

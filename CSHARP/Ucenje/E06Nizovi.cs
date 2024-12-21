@@ -67,7 +67,7 @@ namespace Ucenje
             char znak = 'A'; //- SAMO JEDAN ZNAK moguće pohraniti, a za VIŠE znakova uvijek string
 
             //ispišite zadnji znak
-            Console.WriteLine(grad[grad.Length-1]); //ispiše zadnje slovo
+            Console.WriteLine(grad[grad.Length - 1]); //ispiše zadnje slovo
             Console.WriteLine(grad.Length); //broji ukupan broj znakova u varijabli
         }
 

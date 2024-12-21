@@ -9,7 +9,7 @@ namespace Ucenje
     internal class E01Z1
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
             //Console.WriteLine("E01Z01");
 
@@ -23,8 +23,8 @@ namespace Ucenje
             string prezime = Console.ReadLine();
 
             Console.WriteLine("{0} {1}", prezime, ime);
-        
-        
+
+
         }
 
 

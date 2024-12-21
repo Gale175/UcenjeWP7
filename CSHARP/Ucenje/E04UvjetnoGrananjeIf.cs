@@ -101,17 +101,17 @@ namespace Ucenje
             }
 
             // if se može ugnježđivati ili gnjezditi
-            if (broj > 0) 
+            if (broj > 0)
             {
-                if (temp == 0) 
-                { 
+                if (temp == 0)
+                {
                     Console.WriteLine("Ugnježđeno");
                 }
             }
 
             //djelokrug varijable
 
-            if (broj > 0) 
+            if (broj > 0)
             {
                 int t = 8; // Ova varijabla živi samo unutar ovoga if
             }
@@ -124,7 +124,7 @@ namespace Ucenje
             {
                 Console.WriteLine("Super");
             }
-            else 
+            else
             {
                 Console.WriteLine("Nije super");
             }

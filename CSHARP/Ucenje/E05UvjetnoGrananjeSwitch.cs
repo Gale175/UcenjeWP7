@@ -9,7 +9,7 @@ namespace Ucenje
     internal class E05UvjetnoGrananjeSwitch
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
             //Console.WriteLine("E05");
 
@@ -17,7 +17,7 @@ namespace Ucenje
 
             int broj = 3;
 
-            switch (broj) 
+            switch (broj)
             {
                 case 1:
                     Console.WriteLine("Nedovoljan");

@@ -9,7 +9,7 @@ namespace Ucenje
     internal class E03Operatori
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
 
             //Console.WriteLine("E03Operatori");
@@ -24,10 +24,10 @@ namespace Ucenje
 
             // modulo operator % ostatak nakon cjelobrojnog dijeljenja
 
-            Console.WriteLine(i/j);  //Kada se dijele dva int dobije se int (Izgubi se decimalni dio)
-            Console.WriteLine(i/(float)j);
+            Console.WriteLine(i / j);  //Kada se dijele dva int dobije se int (Izgubi se decimalni dio)
+            Console.WriteLine(i / (float)j);
 
-            Console.WriteLine( 5 % 2 );
+            Console.WriteLine(5 % 2);
 
             //operatori increment i decrement
 
