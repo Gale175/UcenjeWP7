@@ -108,6 +108,80 @@ namespace Ucenje
 
                 Console.WriteLine();
             }
+            Console.WriteLine("*********************************");
+
+
+            //petelju se može preskočiti odnosno nastaviti
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4) //preskoči 5. mjesto
+                {
+                    continue; //vraća na početak petlju tj nastavlja od zadnjeg i
+                }
+                Console.WriteLine("Rezerviraj {0}. mjesto", i + 1);
+
+            }
+
+            Console.WriteLine("*********************************");
+            //petlja se može nasilno prekinuti
+            for (int i = 0; i < 10; i++) //prirodni kraj je kada je i=10
+            {
+                if (i == 5)
+                {
+                    break; //nasilno prekini
+                }
+                Console.WriteLine(i);
+            }
+
+
+            Console.WriteLine("*********************************");
+            //korisnost break-a
+            // prim broj, prime nuber, prosti broj
+            // 2 3 5 7 11 13 17
+            // zašto 4 nije prim broj? cjelobrojno je djeljiv sa 2 | 9 nije jer je djeljiv i sa 3
+
+            int brojZaProvjeru = 157;
+            int brojacIteracija = 1;
+            bool prim = true; //moja hipoterza je da je taj broj prim broj
+
+            for (int i = 2; i < brojZaProvjeru/2; i++)
+            {
+                Console.WriteLine("{0}%{1}=={2} ({3})", brojZaProvjeru, i, brojZaProvjeru % i, brojacIteracija++);
+                if (brojZaProvjeru % i == 0)
+                {
+                    prim = false;
+                    break; //to nije prim broj
+                }
+            }
+
+            Console.WriteLine("{0} {1} prim broj", brojZaProvjeru, prim ? "JE" : "NIJE");
+
+            // Za razbribrigu https://hr.wikipedia.org/wiki/Eratostenovo_sito
+
+
+
+
+
+            Console.WriteLine("*********************************");
+
+            //beskonačna petlja
+            for (int i = 0; i > -1; i++)  //OVO NIJE beskonačna petlja zbog brojevne kružnice
+            {
+                break;
+            }
+
+            for (; ; ) //ovo je sintaksa beskonačna petlja
+            {
+                Console.WriteLine("{0} {0} {0} {0} {0} {0} {0} {0} {0} {0} {0} {0} {0} ", new Random().Next());
+                Thread.Sleep(100);
+                //break; //ovo osloboditi ili svaki puta ručno zaustaviti program
+            }
+
+
+
+
+
 
 
 
