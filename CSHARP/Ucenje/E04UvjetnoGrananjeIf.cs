@@ -8,36 +8,35 @@ namespace Ucenje
 {
     internal class E04UvjetnoGrananjeIf
     {
+
         public static void Izvedi()
-
         {
-            // Console.WriteLine("E04");
+            //Console.WriteLine("E04");
 
-            int broj = 7;
+            int broj = 7; // ovo je kao da sam ispisao poruku i da je korisnik unio broj 7
 
-            //Operator == provjerava jednakost on je tipa bool
-            // Ovo je kao da sam ispisao poruku i da je korisnik unio broj 7
+            // operator == provjerava jednakost, on je tipa bool
+
             bool uvjet = broj == 7;
 
-            //if radi sa bool tipom podatka
+            // if radi s bool tipom podataka
             if (uvjet)
             {
                 Console.WriteLine("Broj ima vrijednost 7");
             }
 
-            // U pravilu se if koristi ovako
 
+            // u pravilu se if koristi ovako
             if (broj == 7)
             {
-
-                Console.WriteLine("Ponovo je jednako 7");
+                Console.WriteLine("ponovo je jednako 7");
             }
 
-
-            //if može i bez {}
+            // if može i bez {} i tada se odnosi samo na prvu liniju nakon if
             if (broj == 7)
-                Console.WriteLine("Ovo je bez {} je jednako");
+                Console.WriteLine("I bez {} je jednako");
             //Console.WriteLine("I ovo bih da je uz uvjet jednakosti da je broj 7");
+
 
             if (broj == 7)
             {
@@ -48,7 +47,8 @@ namespace Ucenje
                 Console.WriteLine("Broj NIJE 7");
             }
 
-            //Maksimalni oblik if naredbe je
+
+            // maksimalni oblik if naredbe
             if (broj == 6)
             {
                 Console.WriteLine("Sad je 6");
@@ -56,67 +56,71 @@ namespace Ucenje
             else if (broj == 7)
             {
                 Console.WriteLine("Sad je 7");
-            }//Može ići koliko god želimo else if
-            else //Može i ne mora
+            }// može ići koliko god else if želimo
+            else // može i ne mora
             {
-                Console.WriteLine("Broj nije niti 6 niti 7");
+                Console.WriteLine("broj nije niti 6 niti 7");
             }
 
 
-            // If koristi <, >, >=, <= i !=različito
+            // if koristi <, >, <=, >= i != različito
 
-            //Logički operatori and, or, not
+            // logički operatori and or i not
 
-            //and & i &&
+            // and & ili &&
 
             broj = 1;
             int temp = 2;
 
-            if (broj != 1 & temp < 0) // Provjeravat će se oba uvjeta
+            if (broj != 1 & temp < 0) // provjeravati će se oba uvjeta
             {
                 Console.WriteLine("Hladno je");
             }
 
-            if (broj != 1 && temp < 0) // Ako prvi uvjet nije ispunje ne provjerava se drugi
+            if (broj != 1 && temp < 0) // Ako prvi uvjet nije ispunjen ne provjerava se drugi
             {
                 Console.WriteLine("Hladno je");
             }
 
-            // or | (AltGr+W) ||
+            // or | (Altgr + W) ||
 
-            if (broj > 0 | temp > 0) // Provjeravat će se oba uvjeta 
+            if (broj > 0 | temp > 0) // Provjerava oba uvjeta
             {
                 Console.WriteLine("Toplo je");
             }
 
-            if (broj > 0 || temp > 0) // Ako prvi uvjet nije ispunje ne provjerava se drugi
+            if (broj > 0 || temp > 0) // Ako je prvi uvjet zadovoljen ne provjerava se drugi
             {
                 Console.WriteLine("Toplo je");
             }
 
-            // not ! 
+
+            // not !
             if (!(broj > 1 || temp > 0))
             {
                 Console.WriteLine("Ovo je kompliciran izraz");
             }
 
-            // if se može ugnježđivati ili gnjezditi
-            if (broj > 0)
+            // if se može ugnježđivati
+
+            if(broj > 0)
             {
-                if (temp == 0)
+                if (temp==0)
                 {
                     Console.WriteLine("Ugnježđeno");
                 }
             }
 
-            //djelokrug varijable
+
+            // djelokrug varijable (scope)
 
             if (broj > 0)
             {
-                int t = 8; // Ova varijabla živi samo unutar ovoga if
+                int t = 8; // ova varijabla živi samo unutar ovog if-a
             }
 
-            //Console.WriteLine(t); // Varijabla t nije vidljiva iznad gore definiranog if- GREŠKA
+            //Console.WriteLine(t); // varijabla t nije vidljiva izvan gore definiranog if-a
+
 
             string grad = "Osijek";
 
@@ -126,17 +130,18 @@ namespace Ucenje
             }
             else
             {
-                Console.WriteLine("Nije super");
+                Console.WriteLine("Nije Super");
             }
 
-            // U slučaju da if i else imaju istu akciju (naredba, metoda) tada se može koristit
-            // inline if (? operator)
+            // u slučaju da if i else imaju istu akciju (naredba, metoda) tada se može koristiti
+            // inline if (? : operator)
 
-            Console.WriteLine(grad == "Osijek" ? "Super" : "Nije super");
-
+            Console.WriteLine(grad=="Osijek" ? "Super" : "Nije Super");
 
 
         }
+
+
 
     }
 }

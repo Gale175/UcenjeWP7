@@ -8,9 +8,12 @@ namespace Ucenje
 {
     internal class E07SubotaZ1
     {
-        //Za učitani cijeli broj između 10 i 99 ispiši jediničnu vrijednost
-        //Za 56 treba ispisati 6, za 82 trabe ispisati 2
-        public static void Izvedi() 
+
+        // Za učitani cijeli broj između 10 i 99 ispiši jediničnu vrijednost
+        // 56 -> 6
+        // 82 -> 2
+
+        public static void Izvedi()
         {
             Console.Write("Unesi cijeli broj između 10 i 99: ");
             int broj = int.Parse(Console.ReadLine());
@@ -19,9 +22,8 @@ namespace Ucenje
             Console.Write("Ponovi unos: ");
             Console.WriteLine(Console.ReadLine()[1]);
 
-            //Sada ispisati prvu znamenku iz int
+            // sada ispisati prvu znamenku (iz int)
             Console.WriteLine(broj/10);
-
 
         }
 

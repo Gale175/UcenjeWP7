@@ -8,8 +8,9 @@ namespace Ucenje
 {
     internal class E04Z1
     {
-        //Program unosi od korisnika cijeli broj
-        //Program ispisuje da li je broj paran ili neparan
+
+        // Program unosi od korisnika cijeli broj.
+        // Program ispuje da li je broj paran ili neparan
 
         public static void Izvedi()
         {
@@ -25,7 +26,8 @@ namespace Ucenje
                 Console.WriteLine("NEPARAN");
             }
 
-            Console.WriteLine("{0}PARAN", broj % 2 == 0 ? "" : "NE");
+            Console.WriteLine("{0}PARAN", broj % 2 == 0 ? "" : "NE"); 
+
         }
 
     }

@@ -11,9 +11,8 @@ namespace Ucenje
 
         public static void Izvedi()
         {
-            //Console.WriteLine("E05");
+            // switch radi s int, string, char i drugi https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/statements#1383-the-switch-statement
 
-            // Switch radi sa int char i drug
 
             int broj = 3;
 
@@ -38,6 +37,7 @@ namespace Ucenje
                     Console.WriteLine("Nije ocjena");
                     break;
             }
+
         }
 
     }
