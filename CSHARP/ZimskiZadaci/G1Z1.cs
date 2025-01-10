@@ -11,9 +11,9 @@ namespace ZimskiZadaci
 
         public static void Izvedi() 
         {
-            Console.WriteLine("********************************");
+            
             Console.WriteLine("1.-POVRŠINA PRAVOKUTNIKA");
-
+            Console.WriteLine("********************************");
 
             decimal d, s;
             Console.Write(" Unesi duljinu stranice pravoktunika: ");

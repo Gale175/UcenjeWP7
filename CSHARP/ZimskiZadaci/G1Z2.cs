@@ -12,8 +12,10 @@ namespace ZimskiZadaci
         
         {
 
-            Console.WriteLine("********************************");
+            
             Console.WriteLine("2.-VRSTA BROJA");
+            Console.WriteLine("********************************");
+
 
             double c;
             Console.Write(" Unesi broj: ");

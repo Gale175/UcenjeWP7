@@ -12,8 +12,10 @@ namespace ZimskiZadaci
         public static void Izvedi()
         {
 
-            Console.WriteLine("********************************");
+            
             Console.WriteLine("3.-NIZOVI");
+            Console.WriteLine("********************************");
+
 
             Console.Write("Unesite broj elemenata niza: ");
             int elementi = int.Parse(Console.ReadLine());

@@ -12,8 +12,10 @@ namespace ZimskiZadaci
         public static void Izvedi()
         {
 
-            Console.WriteLine("********************************");
+            
             Console.WriteLine("4.-PROSJEK OCJENA");
+            Console.WriteLine("********************************");
+
 
             Console.Write("Unesi broj ocjena: ");
             int brojElemenata = int.Parse(Console.ReadLine());
