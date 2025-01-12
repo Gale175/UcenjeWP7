@@ -3,7 +3,10 @@
 
 using ZimskiZadaci;
 
-G1Z10.Izvedi();
+GENLozinki.Izvedi();
+
+
+//G1Z10.Izvedi();
 
 
 //G1Z9.Izvedi();
