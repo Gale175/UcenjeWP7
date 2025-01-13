@@ -23,10 +23,10 @@ namespace Ucenje
 
             } while (false);
 
-            // sve ostalo navedeno u for (break i continue) te u while (&& || !) rade jednako i u do while
+            // sve ostalo navedeno u for (break i continue) te u while (&&=jednako ||=or != not) rade jednako i u do while
 
             // ispisati sve parne brojeve od 2 do 28 koristeći do while
-
+            // ispiuje 2 4 6 8 10 12 14 16 18 20 22 24 26
             int odBroj = 2;
             int doBroj = 28;
 
