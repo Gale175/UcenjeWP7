@@ -6,19 +6,11 @@ using Ucenje;
 
 E12Z2.Izvedi();
 
-
-
-
 //E12Z1.Izvedi();
 
-
-
-//E12ForEachPetlja.Izvedi();
-
-
+//E12ForEach.Izvedi();
 
 //E11DoWhilePetlja.Izvedi();
-
 
 //E10WhilePetlja.Izvedi();
 
@@ -46,8 +38,6 @@ E12Z2.Izvedi();
 
 //E01Z1.Izvedi();
 
-
 //E01UlazIzlaz.Izvedi();
-
 
 //Console.WriteLine("Hello, World!");
