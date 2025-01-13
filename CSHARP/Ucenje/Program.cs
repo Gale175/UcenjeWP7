@@ -4,7 +4,10 @@
 
 using Ucenje;
 
-Z1.Izvedi();
+E11DoWhilePetlja.Izvedi();
+
+
+//E10WhilePetlja.Izvedi();
 
 //E08ForPetlja.Izvedi();
 
