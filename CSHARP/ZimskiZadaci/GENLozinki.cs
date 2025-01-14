@@ -10,7 +10,7 @@ namespace ZimskiZadaci
     internal class GENLozinki
     {
 
-        public static void Izvedi() 
+        public static void Izvedi()
         {
 
 
@@ -23,28 +23,53 @@ namespace ZimskiZadaci
             Console.Write("Broj lozinki koji želim generirati je: ");
             int kol = int.Parse(Console.ReadLine());
 
-            Console.Write("Uključena velika slova? y/n ");
-            bool Vslova = bool.Parse(Console.ReadLine(true));
+
+
+            string velikaSl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string malaSl = "abcdefghijklmnopqrstuvwxyz";
+            string brojevi = "0123456789";
+            string znakovi = "/!@#$%^&*()";
+            string sviZnakovi = "";
+
+            
+            Console.Write("Uključena velika slova? (y/n): ");
+            bool Vslova = bool.Parse(Console.ReadLine());
+            if (Vslova = true) sviZnakovi += velikaSl;
 
             Console.Write("Uključena mala slova? y/n ");
-            bool MSlova = bool.Parse(Console.ReadLine(true));
+            bool MSlova = bool.Parse(Console.ReadLine());
+            if (MSlova = true) sviZnakovi += malaSl;
 
             Console.Write("Uključeni brojevi? y/n ");
-            bool brojevi = bool.Parse(Console.ReadLine(true));
+            bool brUklj = bool.Parse(Console.ReadLine());
+            if (brUklj = true) sviZnakovi += brojevi;
 
             Console.Write("Uključeni znakovi? y/n ");
-            bool znakovi = bool.Parse(Console.ReadLine(true));
+            bool znakUklj = bool.Parse(Console.ReadLine());
+            if (znakUklj = true) sviZnakovi += znakovi;
 
-            char[] pass = new char[duz];
+
+            Random random = new Random();
+            
+
+            string[] password = new string[duz];
+
+            foreach (string s in password) 
+            { 
+            
+                Console.WriteLine(s);
+            
+            }
 
             
 
+            /////
 
 
-                    //ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    //abcdefghijklmnopqrstuvwxyz
-                    //0123456789
-                    //!@#$%^&*()
+
+
+
+
 
 
         }
