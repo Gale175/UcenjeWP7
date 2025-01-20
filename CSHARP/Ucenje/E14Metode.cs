@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Ucenje
         // metoda je organizacijska jedinica koda koja služi određenoj svrsi
         // cilj rada s metodama: Write once, use everywhere
         // static označava da se metoda može pozvati na klasi
-        public static void Izvedi() 
+        public static void Izvedi()
         {
 
             Console.WriteLine("***************************");
@@ -34,20 +35,20 @@ namespace Ucenje
             Console.WriteLine(Tip3());
 
             // svi prosti brojevi od 1 do 100
-            for (int i = 1; i < 100; i++) 
+            for (int i = 1; i < 100; i++)
             {
 
-                if (Tip4(i)) 
-                { 
-                
+                if (Tip4(i))
+                {
+
                     Console.WriteLine(i);
-                
-                
+
+
                 }
-            
+
             }
 
-            
+
 
         }
 
@@ -61,8 +62,8 @@ namespace Ucenje
         /// ne piše public ili nešto drugo: radi se o načinu pristupa
         ///  bez navođenja: vidljivo samo u ovoj klasi
         /// </summary>
-        static void Tip1() 
-        { 
+        static void Tip1()
+        {
             Console.WriteLine("Ispis iz metode Tip1");
         }
 
@@ -74,8 +75,8 @@ namespace Ucenje
         /// Metoda koja ispisuje broj i njegovo uvećanje za 10
         /// </summary>
         /// <param name="i">Primljeni broj</param>
-        private static void Tip2(int i) 
-        { 
+        private static void Tip2(int i)
+        {
             Console.WriteLine("Primio sam broj {0}", i);
             Console.WriteLine("Uvećan za 10 on iznosi {0}", i + 10);
         }
@@ -90,7 +91,7 @@ namespace Ucenje
 
         // 3. vrsta - vraća vrijednost, ne prima parametre
 
-        public static string Tip3() 
+        public static string Tip3()
         {
             // ako nije void, metoda mora vratiti (return) onaj tip za koji je deklarirana
             return "Web programiranje";
@@ -106,29 +107,29 @@ namespace Ucenje
         /// </summary>
         /// <param name="broj"></param>
         /// <returns></returns>
-        public static bool Tip4(int broj) 
+        public static bool Tip4(int broj)
         {
-           
-            for (int i = 2; i < broj; i++) 
+
+            for (int i = 2; i < broj; i++)
             {
 
-                if (broj % i == 0) 
+                if (broj % i == 0)
                 {
 
                     // shrot cuircuting
                     //prekidam i petlju i metodu i vraćam false
                     return false;
-                
+
                 }
-            
-            } 
+
+            }
 
             return true;
         }
 
-        public static int UcitajBroj(string poruka) 
+        public static int UcitajBroj(string poruka)
         {
-            while (true) 
+            while (true)
             {
 
                 Console.Write(poruka + ": ");
@@ -141,43 +142,66 @@ namespace Ucenje
 
                     Console.WriteLine("Niste unijeli broj!");
                 }
-            
+
             }
-             //return 0; // samo da ne bude greška, kasnije obrisati
-        
-        
+            //return 0; // samo da ne bude greška, kasnije obrisati
+
+
         }
 
-        public static int UcitajBroj(string poruka, int min, int max) 
+        public static int UcitajBroj(string poruka, int min, int max)
         {
             int i = 0;
-            for (; ; ) 
+            for (; ; )
             {
 
                 Console.Write(poruka + ": ");
                 try
                 {
                     i = int.Parse(Console.ReadLine());
-                    if (i < min || i > max) 
-                    { 
+                    if (i < min || i > max)
+                    {
                         Console.WriteLine("Broj nije u rasponu {0} i {1}!", min, max);
                         continue;
                     }
                     return i;
                 }
-                catch 
+                catch
                 {
 
                     Console.WriteLine("Nisi unio broj!");
-                    
+
                 }
-            
+
             }
 
 
             //return 0;
-        
+
         }
+
+        public static string UcitajString(string poruka, string greska) 
+        {
+            string s;
+
+            do
+            {
+                Console.Write(poruka + ": ");
+                s = Console.ReadLine();
+                if (s.Trim().Length == 0) 
+                {
+                    Console.WriteLine(greska);
+                    continue;
+                }
+                return s;
+            } while (true);
+        }
+
+
+
+
+
+
 
 
     }
