@@ -4,7 +4,12 @@
 
 using Ucenje;
 
-E13Z2.Izvedi();
+E14Z1.Izvedi();
+
+//E14Metode.Izvedi();
+
+
+//E13Z2.Izvedi();
 
 //E13Z1.Izvedi();
 
