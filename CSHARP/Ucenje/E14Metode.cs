@@ -179,7 +179,11 @@ namespace Ucenje
             //return 0;
 
         }
-
+        /// <summary>
+        /// </summary>
+        /// <param name="poruka"></param>Poruka koja se ispisuje korisniku
+        /// <param name="greska"></param>poruka greške u slčujaju da nije napravio unos
+        /// <returns></returns>
         public static string UcitajString(string poruka, string greska) 
         {
             string s;
