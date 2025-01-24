@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,12 @@ namespace Ucenje.E17KlasaObjekt
         public string Prezime { get; set; } = ""; // = će postaviti prazno, neće biti null
         public DateTime? DatumRođenja { get; set; }
 
+
+        // ovo je iz konteksta baza veza 1:n
         public Mjesto Mjesto { get; set; } = new Mjesto();
+
+        // ovo je iz konteksta baza veza n:n
+        public Mjesto[]? Mjesta { get; set; }
 
 
 

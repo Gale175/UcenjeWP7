@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,10 +39,10 @@ namespace Ucenje.E17KlasaObjekt
             Console.WriteLine(osobe[1].Ime);
 
             Console.WriteLine("*************************************");
-            foreach (Osoba o in osobe)
+            foreach (Osoba vo in osobe) // vo mi glumi varijbal osoba
             {
 
-                Console.WriteLine(o?.Ime?? "Nije postavljeno"); // o?.Ime --> program neće puknuti ako je null ---> ovo je if
+                Console.WriteLine(vo?.Ime ?? "Nije postavljeno"); // o?.Ime --> program neće puknuti ako je null ---> ovo je if
             }
 
             Console.WriteLine("*************************************");
@@ -82,6 +83,42 @@ namespace Ucenje.E17KlasaObjekt
 
             // ispisati Split
             Console.WriteLine(osobe[2].Mjesto.Naziv);
+
+
+            // Primjer korištenja klasa iz SDK
+
+            Random random = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+
+                Console.WriteLine(random.Next(1, 10));
+
+            }
+
+            // da ne pišem svaki puta osoba[2] mogu koristiti varijablu o
+            var o = osobe[2];
+
+            o.Mjesto.Zupanija = new Zupanija
+            {
+                Naziv = "Splitsko-dalmatinska",
+                Zupan = new()
+                {
+
+                    Ime = "Marko",
+                    Mjesto = new()
+                    {
+                        Naziv = "Sinj"
+                    }
+                }
+            };
+
+            // ispisati Sinj
+            Console.WriteLine(o.Mjesto.Zupanija.Zupan.Mjesto.Naziv);
+
+
+
+
         }
 
     }
