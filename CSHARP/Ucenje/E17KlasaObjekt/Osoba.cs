@@ -12,10 +12,15 @@ namespace Ucenje.E17KlasaObjekt
 
         // klasa sadrži svojstva
         // princip učahurivanja gdje se kaže da će klasa sakriti svoja svojstva ---> najčešće POCO (plain old c# objects)
+        // svojstva klase idu velikim početnim slovima
         public int Sifra { get; set; }
         public string? Ime { get; set; } // ? znači da može biti null
         public string Prezime { get; set; } = ""; // = će postaviti prazno, neće biti null
         public DateTime? DatumRođenja { get; set; }
+
+        public Mjesto Mjesto { get; set; } = new Mjesto();
+
+
 
 
 

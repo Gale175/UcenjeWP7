@@ -28,7 +28,7 @@ namespace Ucenje.E17KlasaObjekt
 
             Console.WriteLine(osoba.Ime);
 
-            Osoba[] osobe = new Osoba[2];
+            Osoba[] osobe = new Osoba[3];
 
             osobe[0] = osoba;
 
@@ -41,21 +41,47 @@ namespace Ucenje.E17KlasaObjekt
             foreach (Osoba o in osobe)
             {
 
-                Console.WriteLine(o.Ime);
+                Console.WriteLine(o?.Ime?? "Nije postavljeno"); // o?.Ime --> program neće puknuti ako je null ---> ovo je if
             }
 
             Console.WriteLine("*************************************");
 
             Console.WriteLine(osoba.ImePrezime()); // na objektu osoba zovem metodu ImePrezime
-            //osoba.Hello(); ovo ne mogu
+            //osoba.Hello(); //ovo ne mogu
             Osoba.Hello(); // ovo mogu jer je metoda static
 
             // ispiši Ana Zimska
             Console.WriteLine(osobe[1].ImePrezime());
 
+            // ne treba pisati s desne strane jer piše sa lijeve mjesto
+            Mjesto mjesto = new() { Naziv = "Osijek", PostanskiBroj = "31000" };
 
+            osoba.Mjesto = mjesto;
 
+            Console.WriteLine("*************************************");
+            //ispisati Osijek
+            Console.WriteLine(osoba.Mjesto.Naziv);
 
+            var m = new Mjesto() { Naziv = "Zagreb", PostanskiBroj = "10000" }; // () se može izostaviti 
+
+            osobe[1].Mjesto = m;
+
+            Console.WriteLine("*************************************");
+            // ispisati Zagreb
+            Console.WriteLine(osobe[1].Mjesto.Naziv);
+
+            osobe[2] = new()
+            {
+
+                Ime = "Ivo",
+                Mjesto = new()
+                {
+                    Naziv = "Split"
+                }
+            };
+
+            // ispisati Split
+            Console.WriteLine(osobe[2].Mjesto.Naziv);
         }
 
     }
