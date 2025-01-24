@@ -4,7 +4,10 @@
 
 using Ucenje;
 
-E16Vjezbanje.Izvedi();
+// kreiranje objekta/ instance klase program
+new Ucenje.E17KlasaObjekt.Program(); // poziva se konstruktor klase program (5. vrsta metode)
+
+//E16Vjezbanje.Izvedi();
 
 //E15Rekurzija.Izvedi();
 
