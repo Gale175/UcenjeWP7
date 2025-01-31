@@ -5,7 +5,7 @@
 using Ucenje;
 
 // kreiranje objekta/ instance klase program
-new Ucenje.E17KlasaObjekt.Program(); // poziva se konstruktor klase program (5. vrsta metode)
+new Ucenje.E18NasljedivanjePolimorfizam.Program("E18 drugi konstruktor"); // poziva se konstruktor klase program (5. vrsta metode)
 
 //E16Vjezbanje.Izvedi();
 
