@@ -29,5 +29,9 @@ namespace Ucenje.E19GSALE
         {
             Console.WriteLine("Stara metoda");
         }
+
+
+
+
     }
 }
