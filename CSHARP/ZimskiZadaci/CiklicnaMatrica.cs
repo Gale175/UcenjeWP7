@@ -66,14 +66,14 @@ namespace ZimskiZadaci
                 minStup++; // povecanje minimalnog stupca
             }
 
-            // Ispis matrice
+            // petlja za popunjavanje matrice
             for (int i = 0; i < red; i++)
             {
                 for (int j = 0; j < stup; j++)
                 {
                     Console.Write(matrica[i, j] + "\t");
                 }
-                Console.WriteLine();
+                Console.WriteLine(); // Ispis matrice
             }
 
         }
