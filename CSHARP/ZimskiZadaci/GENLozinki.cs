@@ -17,17 +17,18 @@ namespace ZimskiZadaci
             Console.WriteLine("GENERATOR LOZINKI");
             Console.WriteLine("********************************");
 
+            // upit za duzinu lozinke
             Console.Write("Unesi dužinu lozinke: ");
             int duz = int.Parse(Console.ReadLine());
 
-
+            // deklaracija stringova za sve znakove
             string velikaSl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string malaSl = "abcdefghijklmnopqrstuvwxyz";
             string brojevi = "0123456789";
             string znakovi = ".?!,;'’_-()/:;";
             string sviZnakovi = "";
 
-            
+            // uvjeti za ukljucivanje znakova, brojeva, slova
             Console.Write("Uključena velika slova? (da/ne): ");
             bool Vslova = Console.ReadLine().Trim().ToLower() == "da";
             if (Vslova) sviZnakovi += velikaSl;
@@ -56,7 +57,7 @@ namespace ZimskiZadaci
             Console.Write("Broj lozinki koji želim generirati je: ");
             int kol = int.Parse(Console.ReadLine());
 
-
+            // uvjeti za ispisivanje greske ukoliko korisnik odabere sve false
             if (brUklj == false && Vslova == false && MSlova == false && znakUklj == false)
             {
                 Console.WriteLine("Niste uključili niti jednu vrstu znakova!");
@@ -64,11 +65,13 @@ namespace ZimskiZadaci
             }
 
             Console.WriteLine("********************************");
-            Random random = new Random();
             
+            Random random = new Random(); // deklariranje randoma
 
-            string password = "";
 
+            string password = ""; // deklariranje lozinke
+
+            // petlja za generiranje lozinke
             for (int i = 0; i < kol; i++)
             {
                 password = "";
@@ -78,38 +81,41 @@ namespace ZimskiZadaci
 
                     int pozicija;
                     pozicija = random.Next(0, sviZnakovi.Length);
-
+                    
+                    // petlja za provjeru ponavljanja znakova ukoliko je true ili false
                     if (ponavljanje == true)
                     {
                         password += sviZnakovi[pozicija];
                     }
                     else
-                    {
-                        while (password.Contains(sviZnakovi[pozicija]))
+                    {   
+                        // ponovno randomozira znak ukoliko se ponavlja
+                        while (password.Contains(sviZnakovi[pozicija])) 
                         {
                             pozicija = random.Next(0, sviZnakovi.Length);
                         }
                         password += sviZnakovi[pozicija];
                     }
 
+                    // uvjeti za prvi znak u lozinki
                     if (prviBroj == true)
                     {
                         if (j == 0)
                         {
-                            password = random.Next(0, 10).ToString();
+                            password = random.Next(0, 10).ToString(); // stavi prvi znak u lozinki broj
                         }
                     }
-
+                    // uvjeti za prvi znak u lozinki
                     if (prviInter == true)
                     {
                         if (j == 0)
                         {
-                            password = znakovi[random.Next(0, znakovi.Length)].ToString();
+                            password = znakovi[random.Next(0, znakovi.Length)].ToString(); // stavi prvi znak u lozinki interpunkcijski znak
                         }
                     }
                 }
                 
-                Console.WriteLine(password);
+                Console.WriteLine(password); // ispis lozinke
             }
 
 

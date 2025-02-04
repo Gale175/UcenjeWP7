@@ -3,7 +3,9 @@
 
 using ZimskiZadaci;
 
-GENLozinki.Izvedi();
+CiklicnaMatrica.Izvedi();
+
+//GENLozinki.Izvedi();
 
 
 //G1Z10.Izvedi();
