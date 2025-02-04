@@ -8,7 +8,6 @@ GENLozinki.Izvedi();
 
 //G1Z10.Izvedi();
 
-
 //G1Z9.Izvedi();
 
 //G1Z8.Izvedi();

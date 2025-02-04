@@ -24,7 +24,7 @@ namespace ZimskiZadaci
             string velikaSl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string malaSl = "abcdefghijklmnopqrstuvwxyz";
             string brojevi = "0123456789";
-            string znakovi = "/!@#$%^&*()";
+            string znakovi = ".?!,;'’_-()/:;";
             string sviZnakovi = "";
 
             
@@ -63,7 +63,7 @@ namespace ZimskiZadaci
                 return;
             }
 
-
+            Console.WriteLine("********************************");
             Random random = new Random();
             
 
@@ -108,6 +108,7 @@ namespace ZimskiZadaci
                         }
                     }
                 }
+                
                 Console.WriteLine(password);
             }
 
