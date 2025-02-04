@@ -20,10 +20,6 @@ namespace ZimskiZadaci
             Console.Write("Unesi dužinu lozinke: ");
             int duz = int.Parse(Console.ReadLine());
 
-            Console.Write("Broj lozinki koji želim generirati je: ");
-            int kol = int.Parse(Console.ReadLine());
-
-
 
             string velikaSl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string malaSl = "abcdefghijklmnopqrstuvwxyz";
@@ -32,38 +28,95 @@ namespace ZimskiZadaci
             string sviZnakovi = "";
 
             
-            Console.Write("Uključena velika slova? (y/n): ");
-            bool Vslova = bool.Parse(Console.ReadLine());
-            if (Vslova = true) sviZnakovi += velikaSl;
+            Console.Write("Uključena velika slova? (da/ne): ");
+            bool Vslova = Console.ReadLine().Trim().ToLower() == "da";
+            if (Vslova) sviZnakovi += velikaSl;
 
-            Console.Write("Uključena mala slova? y/n ");
-            bool MSlova = bool.Parse(Console.ReadLine());
-            if (MSlova = true) sviZnakovi += malaSl;
+            Console.Write("Uključena mala slova? (da/ne): ");
+            bool MSlova = Console.ReadLine().Trim().ToLower() == "da";
+            if (MSlova) sviZnakovi += malaSl;
 
-            Console.Write("Uključeni brojevi? y/n ");
-            bool brUklj = bool.Parse(Console.ReadLine());
-            if (brUklj = true) sviZnakovi += brojevi;
+            Console.Write("Uključeni brojevi? (da/ne): ");
+            bool brUklj = Console.ReadLine().Trim().ToLower() == "da";
+            if (brUklj) sviZnakovi += brojevi;
 
-            Console.Write("Uključeni znakovi? y/n ");
-            bool znakUklj = bool.Parse(Console.ReadLine());
-            if (znakUklj = true) sviZnakovi += znakovi;
+            Console.Write("Uključeni znakovi? (da/ne): ");
+            bool znakUklj = Console.ReadLine().Trim().ToLower() == "da";
+            if (znakUklj) sviZnakovi += znakovi;
+
+            Console.Write("Ponavljanje znakova? (da/ne): ");
+            bool ponavljanje = Console.ReadLine().Trim().ToLower() == "da";
+            
+            Console.Write("Prvi znak u lozinki broj? (da/ne): ");
+            bool prviBroj = Console.ReadLine().Trim().ToLower() == "da";
+
+            Console.Write("Prvi znak u lozinki interpunkcijski znak? (da/ne): ");
+            bool prviInter = Console.ReadLine().Trim().ToLower() == "da";
+
+            Console.Write("Broj lozinki koji želim generirati je: ");
+            int kol = int.Parse(Console.ReadLine());
+
+
+            if (brUklj == false && Vslova == false && MSlova == false && znakUklj == false)
+            {
+                Console.WriteLine("Niste uključili niti jednu vrstu znakova!");
+                return;
+            }
 
 
             Random random = new Random();
             
 
-            string[] password = new string[duz];
+            string password = "";
 
-            foreach (string s in password) 
-            { 
+            for (int i = 0; i < kol; i++)
+            {
+                password = "";
+                for (int j = 0; j < duz; j++)
+                {
             
-                Console.WriteLine(s);
-            
+
+                    int pozicija;
+                    pozicija = random.Next(0, sviZnakovi.Length);
+
+                    if (ponavljanje == true)
+                    {
+                        password += sviZnakovi[pozicija];
+                    }
+                    else
+                    {
+                        while (password.Contains(sviZnakovi[pozicija]))
+                        {
+                            pozicija = random.Next(0, sviZnakovi.Length);
+                        }
+                        password += sviZnakovi[pozicija];
+                    }
+
+                    if (prviBroj == true)
+                    {
+                        if (j == 0)
+                        {
+                            password = random.Next(0, 10).ToString();
+                        }
+                    }
+
+                    if (prviInter == true)
+                    {
+                        if (j == 0)
+                        {
+                            password = znakovi[random.Next(0, znakovi.Length)].ToString();
+                        }
+                    }
+                }
+                Console.WriteLine(password);
             }
 
+
+
+
             
 
-            /////
+            
 
 
 
