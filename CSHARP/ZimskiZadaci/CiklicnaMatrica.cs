@@ -22,7 +22,7 @@ namespace ZimskiZadaci
             int stup = int.Parse(Console.ReadLine());
 
             int[,] matrica = new int[red, stup]; // kreiranje matrice i deklariranje
-            int broj = 1; // deklariranje broja
+            int broj = 1; // deklariranje broja za ispis u matricu
             int redak = 0; // deklariranje reda
             int stupac = 0; // deklariranje stupca
             int maxRed = red - 1; // deklariranje maksimalnog reda
