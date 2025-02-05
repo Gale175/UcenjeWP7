@@ -12,7 +12,7 @@ using Ucenje;
 // kreiranje objekta/ instance klase program
 //new Ucenje.E17KlasaObjekt.Program();
 
-E16Vjezbanje.Izvedi();
+//E16Vjezbanje.Izvedi();
 
 //E15Rekurzija.Izvedi();
 
